@@ -1,8 +1,79 @@
-body {
-  padding: 50px;
+html,body {
+  /*padding: 50px;*/
+  white-space: nowrap;
+  overflow:hidden;
+  height: 100vh;;
+  width: 100vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F3F3F3;
 }
 
 a {
   color: #00B7FF;
 }
+
+#navbar{
+
+  background-color:#0E83CD ;
+  width: 100%;
+  text-align: center;
+  color: white;
+
+
+}
+.brand{
+  justify-content: center;
+  background-color: black;
+}
+
+.body_container{
+  height: 100%;
+  /*background-color: #030303;*/
+  position: relative;
+  overflow: hidden;
+
+}
+
+.trans {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.flex-container{
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.spacer{
+  width: 30%;
+}
+.index{
+  position: relative;
+  color: black;
+  z-index: 2;
+}
+.main{
+  flex-flow: column;
+  justify-content:space-around;
+  height: 100%;
+  align-items: center;
+}
+
+
+.black{background-color: black;}
+.blue{background-color: blue;
+width: 80vw;  height: 80vh;}
+.red{background-color: red;
+width: 50%}
+/*
+height: 100%;
+width: 100%;
+/!*background-color: #FAFAFA !important;*!/
+white-space: nowrap;
+background: url('../assets/img/teaser-bg.jpg') no-repeat transparent 50% 55%;*/
