@@ -1,0 +1,101 @@
+<!--<div class="login-form" >
+    <div class="login-content">
+        <form  role="form" id="form_register" name="adduserForm">
+            <div class="form-register-success">
+                <i class="entypo-check"></i>
+                <h3>You have been successfully registered.</h3>
+                <p>We have emailed you the confirmation link for your account.</p>
+            </div>
+            <div class="form-steps">
+                <div class="step current" >
+&lt;!&ndash;firstname&ndash;&gt;
+                    <div class="form-group">
+                     <div class="input-group">
+                         <div class="input-group-addon"> <i class="entypo-user"></i> </div>
+                         <input type="text" class="form-control" id="firstname" ng-model="adduser.firstname"  placeholder="First Name" autocomplete="off" required>
+                     </div></div>
+&lt;!&ndash;lastname&ndash;&gt;
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"> <i class="entypo-user"></i> </div>
+                            <input type="text" class="form-control" id="lastname" ng-model="adduser.lastname"  placeholder="Last Name" autocomplete="off" required>
+                        </div></div>
+&lt;!&ndash;phone&ndash;&gt;
+            <div class="form-group">
+                <div class="input-group"> <div class="input-group-addon"> <i class="entypo-phone"></i> </div>
+                    <input type="text" class="form-control" ng-model="adduser.phoneNo" id="phone" placeholder="Phone Number" data-mask="phone" autocomplete="off" required>
+                </div> </div>
+
+&lt;!&ndash;dob&ndash;&gt;
+            <div class="form-group">
+                <div class="input-group"> <div class="input-group-addon"> <i class="entypo-calendar"></i> </div> <input type="date" class="form-control"  id="birthdate" placeholder="Date of Birth (DD/MM/YYYY)" ng-model="adduser.dob"  autocomplete="off">
+                    &lt;!&ndash;<div class="input-group"> <input type="date" name="bday" ng-model="adduser.date"></div>&ndash;&gt;
+            </div> </div>
+&lt;!&ndash;Gender&ndash;&gt;
+                    <div class="form-group input-group"><p>Gender</p></div>
+            <div class="form-group">
+                <div class="input-group ">
+                    <div class="radio"> <label> <input type="radio" ng-model="adduser.gender" value="Male" checked=""> Male </label>   </div>
+                     </div>
+                <div class="input-group ">
+                    <div class="radio">  <label> <input type="radio"  ng-model="adduser.gender" value="Female"> Female </label>  </div>
+                </div>
+            </div>
+
+&lt;!&ndash;group &ndash;&gt;
+                    <div class="form-group input-group"><p>Fellowship Group</p></div>
+                    <div class="form-group">
+                        <div class=" input-group">
+                        &lt;!&ndash; <input type="text" class="form-control" id="unit" placeholder="Unit" >&ndash;&gt;
+                        <select class="select" id="unit" ng-model="adduser.group" placeholder = "Fellowship Group">
+                            <option value="Internal IT" ng-selected >Internal IT</option>
+                            <option value="Legal">Legal</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+
+                        </select>
+                        </div>
+                        </div>
+&lt;!&ndash;address&ndash;&gt;
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"> <i class="entypo-address"></i> </div>
+                    <input type="text" class="form-control" ng-model="adduser.address" placeholder="Address" autocomplete="off" required>
+                </div></div>
+             &lt;!&ndash;end of first step &ndash;&gt;
+&lt;!&ndash;email&ndash;&gt;
+                  <div class="form-group"> <div class="input-group"> <div class="input-group-addon"> <i class="entypo-mail"></i> </div> <input type="email" class="form-control"  id="email" ng-model="adduser.email"  placeholder="E-mail" autocomplete="off" required> </div> </div>
+&lt;!&ndash;password&ndash;&gt;
+                    <div class="form-group"> <div class="input-group"> <div class="input-group-addon"> <i class="entypo-lock"></i> </div> <input type="password" class="form-control" ng-model="adduser.password" id="password" placeholder="Choose Password" autocomplete="off" required> </div> </div>
+                    <div class="form-group"> <button type="submit"  ng-disable= "adduser.$invalid" class="btn btn-success btn-block btn-login" ng-click="register(adduserForm)"> <i class="entypo-right-open-mini"></i>
+                        Complete Registration
+                    </button> </div>
+
+
+                    </div>
+                </div>  </form>
+    <div class="login-bottom-links"> <a href="#" class="link"> <i class="entypo-lock"></i>
+    Return to Login Page
+</a> <br> <a href="#">ToS</a> - <a href="#">Privacy Policy</a> </div>  </div></div></div>-->
+
+<div class="page-header text-center  form-div index">
+    <div class="form-container ">
+        <div id="status-buttons" class="text-center">
+            <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
+            <a ui-sref-active="active" ui-sref=".nok"><span>2</span> Next of Kin</a>
+            <a ui-sref-active="active" ui-sref=".parent"><span>3</span> Parent</a>
+            <a ui-sref-active="active" ui-sref=".spouse"><span>4</span>Spouse</a>
+            <a ui-sref-active="active" ui-sref=".sp"><span>5</span> Spouse Parent</a>
+        </div>
+        <form id="signup-form">
+
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+</div>
+
+
+
+

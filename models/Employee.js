@@ -8,8 +8,8 @@ var rekuire = require("rekuire"),
     Schema = mongoose.Schema;
 
 var EmployeeSchema = new Schema({
-    fname: { type: String, required: true },
-    lname: { type: String, required: true },
+    name: { type: String, required: true },
+    phone:{ type: String },
     email: {
         type: String,
         required: true,
@@ -18,6 +18,7 @@ var EmployeeSchema = new Schema({
         lowerCase:true,
         match: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     },
+    address:{ type: String },
     kname: { type: String},
     kphone:{ type: String },
     kemail:{ type: String },

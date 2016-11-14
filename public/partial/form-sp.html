@@ -1,0 +1,30 @@
+<!-- form-sp.html -->
+<div class="form-horizontal"></div>
+<div class="form-group">
+    <label class="white" >Name</label>
+    <input type="text" class="form-control"  ng-model="formData.spname" placeholder="Spouse Parent Name">
+</div>
+
+
+<div class="form-group">
+    <label class="white" >Email</label>
+    <input type="email" class="form-control" id="email" ng-model="formData.spemail" placeholder="Spouse Parent Email">
+</div>
+
+<div class="form-group">
+    <label class="white" >Phone</label>
+    <input type="text" class="form-control" id="phone" ng-model="formData.spphone" placeholder="Spouse Parent Phone">
+</div>
+
+<div class="form-group">
+    <label class="white" >Address</label>
+    <textarea type="text" class="form-control" id="address" ng-model="formData.spaddress" placeholder="Spouse Parent Address"> </textarea>
+</div>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a  class="btn btn-block btn-success" ng-click="processForm()">
+            Submit <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>
