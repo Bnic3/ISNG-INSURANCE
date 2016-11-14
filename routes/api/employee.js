@@ -11,7 +11,9 @@ var empCtrl = rek("empCtrl")(Employee);
 //register employee
 router.post("/register",empCtrl.register);
 
-router.get("/employees", empCtrl.getEmployees)
+router.get("/employees", empCtrl.getEmployees);
+
+router.get('/json', empCtrl.json);
 
 /*router
     .route("/user/:id")
