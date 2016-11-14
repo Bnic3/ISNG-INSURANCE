@@ -6,8 +6,10 @@
 angular.module('insurance',['ngAnimate','ngResource','ui.router'])
     .value('ServiceEndpoint', 'http://localhost:3000')
     .factory('User',userFactory)
+    .factory('Employee',employeeFactory)
     .controller("mainCtrl", mainCtrl)
     .controller("regCtrl", regCtrl)
+    .controller("hrCtrl", hrCtrl)
     .config(appConfig);
 
 
@@ -22,6 +24,13 @@ function appConfig ($stateProvider, $urlRouterProvider){
         .state('home',{url: "/home",
             templateUrl: "/partial/partial-home.html",
             controller:"mainCtrl" })
+        .state('complete',{url: "/complete",
+            templateUrl: "/partial/partial-complete.html"
+             })
+        .state('hr',{url: "/hr",
+            templateUrl: "/partial/partial-hr.html",
+            controller:"hrCtrl" })
+
         .state('register',{url: "/register",
             templateUrl: "/partial/partial-reg.html",
             controller:"regCtrl"})
@@ -70,8 +79,19 @@ function regCtrl($scope, $http, $state,ServiceEndpoint,User){
     $scope.adduser= {};
 
     $scope.formData = {};
-    $scope.processForm = function() {
+
+
+    $scope.processForm = function(form) {
        console.log($scope.formData);
+        if(form.$valid){
+            //using ng resource
+            User.save($scope.formData, function(data){
+                toastr.success("Registration Successful");
+                $state.go("complete");
+            }, function(err){toastr.error("Registration failed");});
+        }
+
+
     };
 
     vm.register= function(form){
@@ -106,6 +126,20 @@ function regCtrl($scope, $http, $state,ServiceEndpoint,User){
     }
 }
 
+function hrCtrl($scope, Employee){
+    $scope.emps = [];
+    Employee.query().$promise.then(function(emps){
+        $scope.emps=emps
+        console.log(emps[1].fname)
+    })
+  /*  console.log($scope.emps.Array[0]);*/
+
+}
+
 function userFactory($resource){
-    return $resource('/signup');
+    return $resource('/register');
+}
+
+function employeeFactory($resource){
+    return $resource('/employees');
 }

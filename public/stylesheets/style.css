@@ -82,6 +82,13 @@ a {
   padding: 5px 5px 5px 5px;
 }
 
+.hr-view{height: 480px;
+  width: 85vw;
+background-color: red;}
+
+.name-list{background-color: black; color: white;
+width: 200px;
+height: 450px;}
 .flex-1{ flex: 1}
 .flex-3{flex: 3}
 .flex-4{flex:10}
@@ -177,3 +184,90 @@ background: url('../assets/img/teaser-bg.jpg') no-repeat transparent 50% 55%;*/
   from    { -webkit-transform:translateX(200%); }
   to      { -webkit-transform: translateX(0); }
 }
+
+
+
+/*
+employee list styles*/
+
+/*.right {
+  float: right;
+  position: relative;
+  top: 6px;
+}
+
+.top {
+  margin-top: -30px;
+}*/
+
+#notebooks {
+  background: whitesmoke;
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+  margin-top: 35px;
+  width: 350px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 0 white;
+  max-height: 450px;
+}
+
+/*ul {
+  margin: 0 auto;
+  padding: 0;
+  max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 5px 0 5px;
+  border-left: none;
+  border-right: none;
+}*/
+
+li {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image:
+  linear-gradient(90deg,
+          #0E83CD 10px,
+          #EEE 10px,
+          #EEE 11px,
+          transparent 11px);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#query {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 19px;
+  padding: 5px;
+  font-family: calibri light;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#notebooks span {
+  display: block;
+  position: absolute;
+  background: #0E83CD;
+  bottom: -35px;
+  left: -1px;
+  width: 360px;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+

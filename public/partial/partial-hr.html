@@ -1,0 +1,18 @@
+
+
+<div class="black index flex-container">
+<div id="notebooks" >
+        <input type="text" id="query" ng-model="query"  />
+        <ul id="emp_ul" class="list-group">
+            <li class="list-group-item" ng-repeat="employee in emps | filter:query | orderBy: orderList">
+                name: {{employee.name}}<br/>
+
+            </li>
+        </ul>
+        <span>Number of Registered Employees: {{emps.length}}</span>
+    </div>
+</div>
+
+
+
+
