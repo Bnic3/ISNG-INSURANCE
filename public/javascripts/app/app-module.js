@@ -13,7 +13,10 @@ angular.module('insurance',['ngAnimate','ngResource','ui.router'])
     .config(appConfig);
 
 
-function appConfig ($stateProvider, $urlRouterProvider){
+function appConfig ($stateProvider, $urlRouterProvider,$compileProvider ){
+    //blob config
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(|blob|):/);
+
     //  $urlRouterProvider.otherwise("/home");
     $urlRouterProvider.otherwise(function($injector, $location){
         $injector.invoke(['$state', function($state) {
@@ -126,12 +129,25 @@ function regCtrl($scope, $http, $state,ServiceEndpoint,User){
     }
 }
 
-function hrCtrl($scope, Employee){
+function hrCtrl($scope, $resource,$window, Employee){
     $scope.emps = [];
     Employee.query().$promise.then(function(emps){
-        $scope.emps=emps
-        console.log(emps[1].fname)
+        $scope.emps=emps;
+        /*console.log(emps[1].fname)*/
     })
+
+    $resource('/json').get().$promise.then(function(data){
+        /*console.log(data.message)*/
+       var  blob = new Blob([data.message], { type: 'text/csv;charset=utf-8;' }),
+            url = $window.URL || $window.webkitURL;
+        $scope.fileUrl = url.createObjectURL(blob);
+
+    })
+
+   /* var data = 'some data here...',
+        blob = new Blob([data], { type: 'text/plain' }),
+        url = $window.URL || $window.webkitURL;
+    $scope.fileUrl = url.createObjectURL(blob);*/
   /*  console.log($scope.emps.Array[0]);*/
 
 }

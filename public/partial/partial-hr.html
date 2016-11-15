@@ -1,6 +1,6 @@
 
 
-<div class="black index flex-container">
+<div class=" index flex-container">
 <div id="notebooks" >
         <input type="text" id="query" ng-model="query"  />
         <ul id="emp_ul" class="list-group">
@@ -11,6 +11,10 @@
         </ul>
         <span>Number of Registered Employees: {{emps.length}}</span>
     </div>
+
+    <a class="btn btn-primary" ng-href="{{ fileUrl }}" download="employeeinsurance.csv">
+        Export to Excel   <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+    </a>
 </div>
 
 
